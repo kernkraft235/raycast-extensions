@@ -58,7 +58,7 @@ class TextToSpeechProcessor {
       const speechFile = path.resolve(os.tmpdir(), `speech_${Date.now()}.mp3`);
       try {
         const mp3 = await this.openai.audio.speech.create({
-          model: "tts-1",
+          model: "tts-1-hd",
           voice: this.voice,
           input: textPart,
         });
